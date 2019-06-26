@@ -40,16 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\RuleType.cs" />
     <Compile Include="Enums\TimeOffType.cs" />
+    <Compile Include="IUserDataFetcher.cs" />
     <Compile Include="Models\DayOff.cs" />
     <Compile Include="Models\OvertimeRatio.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Enums\RateType.cs" />
+    <Compile Include="Models\PositionRule.cs" />
+    <Compile Include="Models\Rule.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserDayOff.cs" />
     <Compile Include="Models\UserPosition.cs" />
     <Compile Include="Models\UserPositionHours.cs" />
     <Compile Include="Models\UserResult.cs" />
+    <Compile Include="Models\UserRule.cs" />
     <Compile Include="Models\UserTimeOff.cs" />
     <Compile Include="Models\UserTimeSheet.cs" />
     <Compile Include="UserDataFetcher.cs" />
