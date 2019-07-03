@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -49,13 +52,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseUserResultHandler.cs" />
+    <Compile Include="DateHelper.cs" />
     <Compile Include="IBaseRateCalculator.cs" />
     <Compile Include="IUserDataProcessor.cs" />
+    <Compile Include="IUserResultHandler.cs" />
     <Compile Include="Models\DaysOffVM.cs" />
     <Compile Include="Models\UserVM.cs" />
     <Compile Include="Models\VacationInfoVM.cs" />
     <Compile Include="UserDataProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VacationInfoHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UserDataAPI\UserDataAPI.csproj">
