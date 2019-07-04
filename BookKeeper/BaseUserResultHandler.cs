@@ -9,7 +9,7 @@ namespace BookKeeper
     {
         protected IUserResultHandler nextHandler;
 
-        public virtual void Handle(UserResult initialUserResult, ref IList<UserResultVM> userResults)
+        public virtual void Handle(UserResult initialUserResult, DateTime startDate, DateTime endDate, ref IEnumerable<UserResultVM> userResults)
         {
         }
 
@@ -18,5 +18,12 @@ namespace BookKeeper
             nextHandler = handler;
         }
        
+        protected void Proceed(UserResult initialUserResult, DateTime startDate, DateTime endDate, ref IEnumerable<UserResultVM> userResults)
+        {
+            if(this.nextHandler != null)
+            {
+                this.nextHandler.Handle(initialUserResult, startDate, endDate, ref userResults);
+            }
+        }
     }
 }
