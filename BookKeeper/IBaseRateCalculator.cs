@@ -4,6 +4,6 @@
 
     public interface IBaseRateCalculator
     {
-        //public decimal Calculate(DateTime StartDate, DateTime EndDate);
+        decimal Calculate(decimal rate, DateTime StartDate, DateTime EndDate);
     }
 }

@@ -22,6 +22,11 @@
             var filteredData = fetcher.FilterUserData(userIds, startDate, endDate);
             var result = Mapper.Map<IEnumerable<User>, IEnumerable<UserResultVM>>(filteredData.Users);
 
+            var chain = new VacationInfoHandler();
+            chain.SetNext(new BaseRateHandler());
+
+            chain.Handle(filteredData, startDate, endDate.Date, ref result);
+
             return result;
         }
     }

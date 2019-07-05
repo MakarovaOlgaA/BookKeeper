@@ -52,8 +52,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRateHandler.cs" />
     <Compile Include="BaseUserResultHandler.cs" />
     <Compile Include="DateHelper.cs" />
+    <Compile Include="FixedBaseRateCalculator.cs" />
+    <Compile Include="HourlyBaseRateCalculator.cs" />
     <Compile Include="IBaseRateCalculator.cs" />
     <Compile Include="IUserDataProcessor.cs" />
     <Compile Include="IUserResultHandler.cs" />
