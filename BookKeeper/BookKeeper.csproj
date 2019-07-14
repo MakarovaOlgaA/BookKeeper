@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -52,20 +49,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseRateHandler.cs" />
-    <Compile Include="BaseUserResultHandler.cs" />
+    <Compile Include="PaymentCalculations\BaseRateHandler.cs" />
+    <Compile Include="PaymentCalculations\OvertimeHandler.cs" />
+    <Compile Include="PaymentCalculations\PaymentHandlerBase.cs" />
     <Compile Include="DateHelper.cs" />
-    <Compile Include="FixedBaseRateCalculator.cs" />
-    <Compile Include="HourlyBaseRateCalculator.cs" />
-    <Compile Include="IBaseRateCalculator.cs" />
+    <Compile Include="PaymentCalculations\FixedBaseRateCalculator.cs" />
+    <Compile Include="PaymentCalculations\HourlyBaseRateCalculator.cs" />
+    <Compile Include="PaymentCalculations\IBaseRateCalculator.cs" />
     <Compile Include="IUserDataProcessor.cs" />
-    <Compile Include="IUserResultHandler.cs" />
+    <Compile Include="PaymentCalculations\IPaymentHandler.cs" />
+    <Compile Include="Mappers\IUserResultMapper.cs" />
+    <Compile Include="Mappers\UserResultMapper.cs" />
     <Compile Include="Models\DaysOffVM.cs" />
-    <Compile Include="Models\UserVM.cs" />
+    <Compile Include="Models\TimeSheetVM.cs" />
+    <Compile Include="Models\UserPositionVM.cs" />
+    <Compile Include="Models\UserResultVM.cs" />
     <Compile Include="Models\VacationInfoVM.cs" />
+    <Compile Include="PaymentCalculations\PositionRuleHandler.cs" />
+    <Compile Include="PaymentCalculations\TimeOffHandler.cs" />
+    <Compile Include="PaymentCalculations\UserRuleHandler.cs" />
     <Compile Include="UserDataProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VacationInfoHandler.cs" />
+    <Compile Include="Mappers\VacationInfoMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UserDataAPI\UserDataAPI.csproj">
@@ -76,5 +81,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
