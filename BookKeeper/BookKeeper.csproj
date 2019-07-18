@@ -50,12 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PaymentCalculations\BaseRateHandler.cs" />
+    <Compile Include="PaymentCalculations\Calculators\IPaymentCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\AnnualRuleCalculator.cs" />
     <Compile Include="PaymentCalculations\OvertimeHandler.cs" />
     <Compile Include="PaymentCalculations\PaymentHandlerBase.cs" />
     <Compile Include="DateHelper.cs" />
-    <Compile Include="PaymentCalculations\FixedBaseRateCalculator.cs" />
-    <Compile Include="PaymentCalculations\HourlyBaseRateCalculator.cs" />
-    <Compile Include="PaymentCalculations\IBaseRateCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\FixedBaseRateCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\HourlyBaseRateCalculator.cs" />
     <Compile Include="IUserDataProcessor.cs" />
     <Compile Include="PaymentCalculations\IPaymentHandler.cs" />
     <Compile Include="Mappers\IUserResultMapper.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Models\UserResultVM.cs" />
     <Compile Include="Models\VacationInfoVM.cs" />
     <Compile Include="PaymentCalculations\PositionRuleHandler.cs" />
+    <Compile Include="PaymentCalculations\Calculators\MonthlyRuleCalculator.cs" />
     <Compile Include="PaymentCalculations\TimeOffHandler.cs" />
     <Compile Include="PaymentCalculations\UserRuleHandler.cs" />
     <Compile Include="UserDataProcessor.cs" />

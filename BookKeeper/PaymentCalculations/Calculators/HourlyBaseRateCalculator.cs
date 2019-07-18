@@ -4,14 +4,15 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using UserDataAPI.Models;
 
-    public class HourlyBaseRateCalculator : IBaseRateCalculator
+    public class HourlyBaseRateCalculator : IPaymentCalculator
     {
         protected IEnumerable<TimeSheetVM> timeSheets;
 
-        public HourlyBaseRateCalculator(IEnumerable<TimeSheetVM> timeSheets)
+        public void Configure(UserResultVM user, UserResult initialUserResult)
         {
-            this.timeSheets = timeSheets;
+            this.timeSheets = user.TimeSheets;
         }
 
         public decimal Calculate(decimal rate, DateTime startDate, DateTime endDate)
