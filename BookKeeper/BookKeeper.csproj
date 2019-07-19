@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PaymentCalculations\BaseRateHandler.cs" />
+    <Compile Include="PaymentCalculations\Calculators\CalculatorFactory.cs" />
     <Compile Include="PaymentCalculations\Calculators\IPaymentCalculator.cs" />
     <Compile Include="PaymentCalculations\Calculators\AnnualRuleCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\WeekendRuleCalculator.cs" />
     <Compile Include="PaymentCalculations\OvertimeHandler.cs" />
     <Compile Include="PaymentCalculations\PaymentHandlerBase.cs" />
     <Compile Include="DateHelper.cs" />
