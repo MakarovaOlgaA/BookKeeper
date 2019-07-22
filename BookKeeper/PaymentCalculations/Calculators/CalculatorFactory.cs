@@ -56,5 +56,28 @@
 
             return calculator;
         }
+
+        public static IOvertimeCalculator GetOvertimeCalculator(UserResultVM user, UserResult initialUserResult, int rateTypeId)
+        {
+            IOvertimeCalculator calculator = null;
+
+            switch ((RateType)rateTypeId)
+            {
+                case RateType.PerHour:
+                {
+                    calculator = new HourlyOvertimeCalculator();
+                    break;
+                }
+                case RateType.Fixed:
+                {
+                    calculator = new FixedOvertimeCalculator();
+                    break;
+                }
+            }
+
+            calculator.Configure(user, initialUserResult);
+
+            return calculator;
+        }
     }
 }

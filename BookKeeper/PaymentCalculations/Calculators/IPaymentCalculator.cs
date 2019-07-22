@@ -4,10 +4,8 @@
     using System;
     using UserDataAPI.Models;
 
-    public interface IPaymentCalculator
+    public interface IPaymentCalculator: IConfigurable
     {
-        void Configure(UserResultVM user, UserResult initialUserResult);
-
         decimal Calculate(decimal rate, DateTime startDate, DateTime endDate);
     }
 }

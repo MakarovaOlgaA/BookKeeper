@@ -10,8 +10,7 @@
     {
         public override decimal Calculate(UserResultVM user, UserResult initialUserResult, DateTime startDate, DateTime endDate)
         {
-            var baseRate = 0M;
-
+            var bonus = 0M;
 
             foreach (var userPosition in user.Positions)
             {
@@ -24,11 +23,11 @@
                     var ruleDateTo = rule.EndDate.HasValue && rule.EndDate < positionDateTo ? rule.EndDate.Value : positionDateTo;
 
                     var calculator = CalculatorFactory.GetRuleCalculator(user, initialUserResult, rule.RuleTypeId);
-                    baseRate += calculator.Calculate(rule.Bonus, ruleDateFrom, ruleDateTo);
+                    bonus += calculator.Calculate(rule.Bonus, ruleDateFrom, ruleDateTo);
                 }
             }
 
-            return baseRate + Proceed(user, initialUserResult, startDate, endDate);
+            return bonus + Proceed(user, initialUserResult, startDate, endDate);
         }
 
         protected IEnumerable<Rule> GetRules(UserResult initialUserResult, int positionId)

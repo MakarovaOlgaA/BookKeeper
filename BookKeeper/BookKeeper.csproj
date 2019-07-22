@@ -49,8 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IConfigurable.cs" />
     <Compile Include="PaymentCalculations\BaseRateHandler.cs" />
     <Compile Include="PaymentCalculations\Calculators\CalculatorFactory.cs" />
+    <Compile Include="PaymentCalculations\Calculators\FixedOvertimeCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\HourlyOvertimeCalculator.cs" />
+    <Compile Include="PaymentCalculations\Calculators\IOvertimeCalculator.cs" />
     <Compile Include="PaymentCalculations\Calculators\IPaymentCalculator.cs" />
     <Compile Include="PaymentCalculations\Calculators\AnnualRuleCalculator.cs" />
     <Compile Include="PaymentCalculations\Calculators\WeekendRuleCalculator.cs" />
